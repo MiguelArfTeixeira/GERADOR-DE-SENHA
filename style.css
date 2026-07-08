@@ -1,27 +1,46 @@
+/* ============================================
+   IMPORTAÇÃO DE FONTES
+   ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
+
+/* ============================================
+   VARIÁVEIS CSS (TEMA)
+   ============================================ */
 :root {
-    --branco: white;
-    --cor-de-fundo: #00162E;
-    --fundo-senha: #00244D;
-    --fundo-texto: #001E40;
-    --borda: #0075FF;
-    --roboto: 'Roboto', sans-serif;
-    --roboto-mono: 'Roboto Mono', monospace;
+    --branco: white;                    /* Cor principal de texto */
+    --cor-de-fundo: #00162E;            /* Cor de fundo geral da página (azul escuro) */
+    --fundo-senha: #00244D;             /* Cor de fundo da área de exibição da senha */
+    --fundo-texto: #001E40;             /* Cor de fundo dos cards de parâmetros */
+    --borda: #0075FF;                   /* Cor azul das bordas e destaques */
+    --roboto: 'Roboto', sans-serif;     /* Fonte padrão (texto) */
+    --roboto-mono: 'Roboto Mono', monospace; /* Fonte monoespaçada (senhas e títulos) */
 }
 
+
+/* ============================================
+   RESET BÁSICO
+   ============================================ */
 * {
-    font-weight: 400;
+    font-weight: 400;   /* Define peso da fonte como normal em todos os elementos */
 }
 
+
+/* ============================================
+   ESTILOS GERAIS DO BODY
+   ============================================ */
 body {
     color: var(--branco);
     background-color: var(--cor-de-fundo);
     font-family: var(--roboto);
 }
 
+
+/* ============================================
+   TÍTULOS
+   ============================================ */
 .titulo-principal {
-    font-family: var(--roboto-mono);
+    font-family: var(--roboto-mono);   /* Fonte monoespaçada para o título principal */
     font-size: 32px;
 }
 
@@ -29,36 +48,56 @@ body {
     font-size: 24px;
 }
 
+
+/* ============================================
+   CONTAINER DO TÍTULO PRINCIPAL
+   ============================================ */
 .conteudo-titulo {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 80px;   /* Espaçamento superior para dar destaque ao título */
 }
 
+
+/* ============================================
+   ÁREA DE EXIBIÇÃO DA SENHA
+   ============================================ */
 .conteudo-senha {
     margin-top: 80px;
     background: var(--fundo-senha);
     padding: 24px;
-    border-bottom: 6px solid var(--borda);
+    border-bottom: 6px solid var(--borda); /* Borda inferior azul forte (efeito visual) */
 }
 
+
+/* ============================================
+   CAMPO DE EXIBIÇÃO DA SENHA
+   ============================================ */
 #campo-senha {
-    background-color: var(--fundo-senha);
+    background-color: var(--fundo-senha); /* Mesma cor do fundo para parecer integrado */
     border: none;
     color: var(--branco);
     font-family: var(--roboto-mono);
-    font-size: 40px;
+    font-size: 40px;          /* Tamanho grande para destacar a senha */
     width: 70%;
 }
 
 #campo-senha:focus {
-    outline: none;
+    outline: none;            /* Remove a borda azul padrão do navegador ao focar */
 }
 
+
+/* ============================================
+   CONTAINER PRINCIPAL (LIMITA LARGURA)
+   ============================================ */
 .conteudo {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;           /* Centraliza o conteúdo na página */
 }
 
+
+/* ============================================
+   CARD DE PARÂMETROS (BLOCO GERAL)
+   ============================================ */
 .parametro {
     background-color: var(--fundo-texto);
     border: 2px solid var(--borda);
@@ -66,31 +105,55 @@ body {
     padding: 24px;
 }
 
+
+/* ============================================
+   TÍTULO DENTRO DOS CARDS DE PARÂMETROS
+   ============================================ */
 .parametro-titulo {
     font-family: var(--roboto-mono);
     font-size: 28px;
 }
 
+
+/* ============================================
+   TÍTULO ESPECÍFICO DA SEÇÃO DE SENHA
+   ============================================ */
 .parametro-senha__titulo {
     font-size: 24px;
 }
 
+
+/* ============================================
+   COLUNA FLEX DOS PARÂMETROS DE SENHA
+   ============================================ */
 .parametro-coluna__senha {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;     /* Empilha os elementos verticalmente (padrão mobile) */
     justify-content: center;
 }
 
+
+/* ============================================
+   CONTAINER DA SEÇÃO DE SENHA
+   ============================================ */
 .parametro-senha {
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto;             /* Centraliza horizontalmente */
 }
 
+
+/* ============================================
+   CONTAINER DOS BOTÕES
+   ============================================ */
 .parametro-senha-botoes {
     display: flex;
-    justify-content: center;
+    justify-content: center;    /* Centraliza os botões horizontalmente */
 }
 
+
+/* ============================================
+   BOTÃO DE AÇÃO (Gerar / Copiar)
+   ============================================ */
 .parametro-senha__botao {
     background: var(--cor-de-fundo);
     color: var(--branco);
@@ -99,16 +162,24 @@ body {
     font-size: 24px;
 }
 
+
+/* ============================================
+   OPÇÕES CLICÁVEIS (maiúsculas, minúsculas, números, símbolos)
+   ============================================ */
 .parametro-senha__texto {
     border-top: 2px solid var(--borda);
     border-bottom: 2px solid var(--borda);
     padding: 24px;
     margin: 0px;
-    cursor: pointer;
+    cursor: pointer;            /* Indica que o elemento é clicável */
 }
 
+
+/* ============================================
+   RESPONSIVIDADE (a partir de 768px)
+   ============================================ */
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha {
-        flex-direction: row;
+        flex-direction: row;    /* Muda para layout em linha (lado a lado) em telas maiores */
     }
 }
