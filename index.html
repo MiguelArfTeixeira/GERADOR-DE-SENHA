@@ -1,41 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!-- Define o idioma da página como Português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 (suporte a acentos) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva em dispositivos móveis -->
+
     <title>Gerador de senha</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <!-- Liga o arquivo CSS externo (style.css) -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- 
+        section.conteudo 
+        Container principal que limita a largura máxima (1200px) e centraliza o conteúdo
+    -->
     <section class="conteudo">
+        
+        <!-- 
+            Cabeçalho da página com título e subtítulo
+            Classe: conteudo-titulo → centralizado + margem superior
+        -->
         <div class="conteudo-titulo">
+            <!-- Ícone do cadeado (o arquivo unlock.svg precisa existir na mesma pasta) -->
             <img src="unlock.svg" alt="cadeado fechado">
+            
+            <!-- Título principal da página -->
             <h2 class="titulo-principal">Gerador de senhas</h2>
+            
+            <!-- Subtítulo / descrição -->
             <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
         </div>
+
+        <!-- 
+            Área de exibição da senha gerada
+            Classe: conteudo-senha → fundo escuro + borda inferior azul
+        -->
         <div class="conteudo-senha">
+            <!-- Label associado ao campo de senha (boa prática de acessibilidade) -->
             <label for="senha">Senha</label>
+            
+            <!-- 
+                Campo onde a senha será exibida
+                ID: campo-senha → estilizado no CSS com fonte grande e mono
+            -->
             <input name="senha" type="text" id="campo-senha">
         </div>
+
+        <!-- 
+            Card de personalização da senha
+            Classe: parametro → card com borda azul e fundo escuro
+        -->
         <div class="parametro">
+            <!-- Título do card -->
             <h3 class="parametro-titulo">Personalize sua senha</h3>
+
+            <!-- 
+                Container flex que organiza as colunas de parâmetros
+                Em telas menores fica em coluna, em telas >= 768px fica em linha (ver CSS)
+            -->
             <div class="parametro-coluna__senha">
+
+                <!-- ========================================= -->
+                <!-- COLUNA 1: Controle de quantidade de caracteres -->
+                <!-- ========================================= -->
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+                    
+                    <!-- Container dos botões - e + -->
                     <div class="parametro-senha-botoes">
+                        <!-- Botão de diminuir quantidade -->
                         <button class="parametro-senha__botao">-</button>
+                        
+                        <!-- Valor atual da quantidade de caracteres -->
                         <p class="parametro-senha__texto">12</p>
+                        
+                        <!-- Botão de aumentar quantidade -->
                         <button class="parametro-senha__botao">+</button>
                     </div>
-                </div>               
+                </div>
+
+                <!-- ========================================= -->
+                <!-- COLUNA 2: Características da senha (ainda vazia) -->
+                <!-- ========================================= -->
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Características da senha</h4>
+                    <!-- 
+                        Aqui vão ficar as opções clicáveis:
+                        - Incluir maiúsculas
+                        - Incluir minúsculas
+                        - Incluir números
+                        - Incluir símbolos
+                    -->
                 </div>
+
+                <!-- ========================================= -->
+                <!-- COLUNA 3: Indicador de força da senha (ainda vazia) -->
+                <!-- ========================================= -->
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Força da senha</h4>
+                    <!-- 
+                        Aqui normalmente fica uma barra de força 
+                        ou texto tipo: "Fraca", "Média", "Forte"
+                    -->
                 </div>
+
             </div>
         </div>
     </section>
