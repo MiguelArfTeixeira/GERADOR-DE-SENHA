@@ -178,6 +178,11 @@ label{
     font-size: 20px;
 }
 
+.checkbox{
+    width: 20px;
+    height: 20px;
+}
+
 
 /* ============================================
    RESPONSIVIDADE (a partir de 768px)
