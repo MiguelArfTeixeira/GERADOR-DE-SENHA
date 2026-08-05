@@ -184,7 +184,25 @@ label{
     cursor: pointer;
 }
 
+.barra{
+    height: 30px;
+    width: 100%;
+    background-color: var(--fundo-senha);
+    border:1px solid var(--borda);
+}
 
+.fraca{
+    height: 30px;
+    width: 25%;
+    background-color: rgb(255, 0, 0);
+    position: relative;
+    bottom: 30px;
+}
+
+.parametro-senha-texto{
+    display: flex;
+    justify-content: space-between;
+}
 /* ============================================
    RESPONSIVIDADE (a partir de 768px)
    ============================================ */
