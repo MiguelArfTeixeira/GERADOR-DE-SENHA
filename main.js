@@ -30,12 +30,19 @@ const letrasMaiusculas='ABCDEFGH';
 geraSenha()
 function geraSenha(){
 
+  let senha = "";
+
     for (let i = 0;i < tamanhoSenha;i++) {
-        
+     
+    
   
     let numeroAleatorio= Math.ramdom()*letrasMaiusculas.lenght;
+
     numeroAleatorio=Math.floor(numeroAleatorio);
+
     console.log(letrasMaiusculas[numeroAleatorio]);
+
+    senha = senha + letrasMaiusculas[numeroAleatorio]
     
 }
   }
