@@ -34,8 +34,6 @@ function geraSenha(){
 
     for (let i = 0;i < tamanhoSenha;i++) {
      
-    
-  
     let numeroAleatorio= Math.ramdom()*letrasMaiusculas.lenght;
 
     numeroAleatorio=Math.floor(numeroAleatorio);
@@ -45,5 +43,7 @@ function geraSenha(){
     senha = senha + letrasMaiusculas[numeroAleatorio]
     
 }
+campoSenha.value=letrasMaiusculas
+
   }
-  campoSenha.value=letrasMaiusculas
+  
