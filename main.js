@@ -7,11 +7,12 @@ botoes[1].onclick=aumentarTamanho();
 
 
 
-function diminuiTamanho() {
+function  {
  if (tamanhoSenha>1) {
 tamanhoSenha--;
 }
 numeroSenha.textContent=tamanhoSenha;
+diminuiTamanho()
 }
 
 function aumentarTamanho(){
