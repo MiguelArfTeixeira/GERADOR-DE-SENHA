@@ -5,6 +5,10 @@ numeroSenha.textContent=tamanhoSenha;
 const botoes=document.querySelectorAll('parametro-senha_botao');
 diminuiTamanho()
 aumentarTamanho()
+
+const campoSenha=document.querySelector(#campo-senha);
+const letrasMaiusculas='ABCDEFGH';
+
 botoes[0].onclick=diminuiTamanho();
 botoes[1].onclick=aumentarTamanho();
 
@@ -26,8 +30,7 @@ numeroSenha.textContent=tamanhoSenha;
 geraSenha()
 }
 
-const campoSenha=document.querySelector(#campo-senha);
-const letrasMaiusculas='ABCDEFGH';
+
 
 // código omitido
 
