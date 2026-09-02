@@ -3,14 +3,14 @@ let tamanhoSenha=12;
 numeroSenha.textContent=tamanhoSenha;
 
 const botoes=document.querySelectorAll('parametro-senha_botao');
-diminuiTamanho()
-aumentarTamanho()
+diminuiTamanho();
+aumentarTamanho();
 
 const campoSenha=document.querySelector(#campo-senha);
 const letrasMaiusculas='ABCDEFGH';
 
-botoes[0].onclick=diminuiTamanho();
-botoes[1].onclick=aumentarTamanho();
+botoes[0].onclick=diminuiTamanho;
+botoes[1].onclick=aumentarTamanho;
 
 
 
