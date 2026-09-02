@@ -1,46 +1,41 @@
-const numeroSenha= document.querySelector('.parametro-_texto');
-let tamanhoSenha=12;
-numeroSenha.textContent=tamanhoSenha;
+const numeroSenha = document.querySelector('.parametro-senha__texto');//selaciona o
+let tamanhoSenha=12;//variael que pode ser alterada
 
-const botoes=document.querySelectorAll('parametro-senha_botao');
-diminuiTamanho();
-aumentarTamanho();
+numeroSenha.textContent=tamanhoSenha;//atribui o tamnho Senha ao numeroSenha
 
-const campoSenha=document.querySelector(#campo-senha);
-const letrasMaiusculas='ABCDEFGH';
+const botoes=document.querySelectorAll('.parametro-senha__botao');//selecionando todas as classes "parametro-senha__botao"
 
-botoes[0].onclick=diminuiTamanho;
-botoes[1].onclick=aumentarTamanho;
+const campoSenha=document.querySelector('#campo-senha');
+const letrasMaiusculas='ABCDEFG';
 
-
+botoes[0].onclick = diminuiTamanho;//Tirar os parenteses
+botoes[1].onclick = aumentaTamanho;
 
 function diminuiTamanho() {
- if (tamanhoSenha>1) {
+if(tamanhoSenha >1){
+//tamanhoSenha=tamanhoSenha-1; //diminui de 1 o valor do tamanhoSenha
 tamanhoSenha--;
 }
-numeroSenha.textContent=tamanhoSenha;
-
+numeroSenha.textContent=tamanhoSenha;//atribui o tamanho Senha ao numeroSenha
+geraSenha();
 }
 
-function aumentarTamanho(){
-   if(tamanhoSenha<20){
- tamanhoSenha++;
+function aumentaTamanho() {
+if(tamanhoSenha<20){
+tamanhoSenha = tamanhoSenha+1; //aumenta de 1 o valor do tamanhoSenha
+//tamanhoSenha++;
 }
-numeroSenha.textContent=tamanhoSenha;
-geraSenha()
+numeroSenha.textContent = tamanhoSenha;//atribui o tamanho Senha ao numeroSenha
+geraSenha();
 }
 
-
-
-// código omitido
 
 function geraSenha(){
 let senha = '';
 for (let i = 0; i < tamanhoSenha;i++){
-        let numeroAleatorio = Math.random()*letrasMaiusculas.length;
-        numeroAleatorio = Math.floor(numeroAleatorio);
-        senha = senha + letrasMaiusculas[numeroAleatorio];
+let numeroAleatorio = Math.random()*letrasMaiusculas.length;
+numeroAleatorio = Math.floor(numeroAleatorio);
+senha = senha + letrasMaiusculas[numeroAleatorio];
 }
 campoSenha.value = senha;
 }
-  
